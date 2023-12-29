@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  display: grid;
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  height: 100vh;
+  place-items: right;
+}
+
+.navbar {
+  position: none;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.navbar ul {
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+}
+
+.nav-item {
+  margin: 10px;
+}
+
+.nav-link {
+  font-family: 'Merriweather', sans-serif;
+  background-image: linear-gradient(to right, #FFFF00, #FFFF00 50%, #ffffff 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 10px 20px;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+  color: transparent;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.nav-link:before {
+  content: '';
+  background: #000000;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  background-position: 0;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+}
+
+.nav-link {
+  color: rgb(0, 0, 0);
+}
+
+.nav-link:hover {
+  background-color: #000000;
+}
+
+.nav-item.left {
+  margin-right: auto;
+}
+
+.nav-item.right {
+  margin-left: 10px;
+}
+
+.nav-item.left .nav-link {
+  background: none;
+  background-position: 0;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  transition: none;
+  color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-item {
+    margin: 5px;
+  }
+
+  .nav-item.left,
+  .nav-item.right {
+    margin: 5px;
+  }
+}
+
+.nav-link.campus-connect {
+  font-family: 'Merriweather', sans-serif;
+}

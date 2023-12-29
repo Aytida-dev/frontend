@@ -1,0 +1,258 @@
+/* Add your custom styles here */
+.blog-editor {
+  max-width: 94vw;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.editor-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 8px 3px;
+  border: none;
+  outline: none;
+  color: black;
+  font-family: "Montserrat";
+}
+
+.ql-toolbar {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.ql-container {
+  border-radius: 4px;
+  height: 300px;
+  border: none;
+}
+
+.ql-editor {
+  padding: 10px;
+  height: 100%;
+  font-size: 16px;
+}
+
+/* Customize other styles as needed */
+
+/* CSS in New_Blog.css */
+.tag {
+  display: inline-block;
+  background-color: black;
+  color: #fff;
+  padding: 5px 7px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: large;
+  cursor: pointer;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.add-tag-button {
+  background-color: black; /* Green color for the button */
+  color: #fff;
+  border: none;
+  padding: 4px 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+/* CSS in New_Blog.css */
+.tag-input {
+  padding: 10px;
+  /* Border color */
+  margin-top: 10px;
+  width: 30vw;
+  font-size: 16px;
+  outline: none;
+}
+
+.add-tag-button,
+.image-upload {
+  background-color: black; /* Background color for button and file input */
+  color: #fff; /* Text color */
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 2px;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Smooth color transition on hover */
+
+  /* Center the text horizontally and vertically */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-tag-button {
+  background-color: black;
+}
+
+.add-tag-button:hover,
+.image-upload:hover {
+  background-color: rgb(52, 52, 52);
+  /* Darker color on hover */
+}
+.add-tag-button:hover {
+  background-color: rgb(69, 69, 69);
+}
+
+.image-upload input[type="file"] {
+  display: none;
+  margin: 10px;
+}
+
+.publish-button {
+  background-color: #4caf50; /* Green color for the button */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right; /* Align to the top-right corner */
+}
+
+.remove-tag {
+  margin: 4px;
+}
+
+/*modal design*/
+
+.image-upload-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(40, 40, 40);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  opacity: 1;
+  width: 70vw;
+  height: 60vh;
+  margin: auto;
+  transition: opacity 0.3s ease-in-out;
+  color: white;
+}
+
+.image-upload-modal h2 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 20px;
+  font-family: "Montserrat";
+}
+
+.image-upload-modal input {
+  font-family: "Montserrat";
+  cursor: pointer;
+  height: 30px;
+}
+
+.image-upload-modal label {
+  padding: 10px 20px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 0px;
+}
+
+.image-preview {
+  max-width: 100%;
+  max-height: 300px;
+  margin-bottom: 20px;
+}
+
+.publish-from-modal {
+  padding: 10px 20px;
+  background-color: green;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Montserrat";
+}
+
+.publish-from-modal:hover {
+  background-color: rgb(59, 212, 59);
+}
+
+.close-icon {
+  height: 30px;
+  width: 60px;
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  stroke: #fff;
+  cursor: pointer;
+  transition: 0.5s cubic-bezier(0.165, 0.775, 0.145, 1.02);
+}
+.close-icon .circle {
+  opacity: 0.2;
+}
+.close-icon:hover .circle {
+  opacity: 0.1;
+}
+.close-icon .progress {
+  opacity: 0;
+}
+
+.close-icon:hover .progress {
+  opacity: 1;
+}
+.progress {
+  transition: 0.5s;
+}
+.close-icon .progress {
+  stroke-dasharray: 1, 120;
+}
+.close-icon:active .progress {
+  stroke-dasharray: 120, 120;
+  transition: 3s cubic-bezier(0.165, 0.775, 0.145, 1.02);
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  display: none;
+  z-index: 120;
+  background-color: red;
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-bottom-color: #ff3d00;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
